@@ -1,4 +1,4 @@
-[![Flmngr file manager screenshot](https://flmngr.com/img/file-manager.gif)](https://flmngr.com)
+[![Flmngr file manager screenshot](https://flmngr.com/img/browsing.jpg)](https://flmngr.com)
 
 ## [Flmngr file manager](https://flmngr.com) - upload, organize and edit images with a charm
 
