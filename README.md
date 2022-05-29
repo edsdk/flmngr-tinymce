@@ -2,7 +2,7 @@
     <a href="https://flmngr.com/"><img src="https://flmngr.com/img/Flmngr.png" alt="Flmngr" width="90" /></a>
 </p>
 
-<h1 align="center">Flmngr</h1>
+<h1 align="center" style="margin-top:-20px">Flmngr</h1>
 
 <p align="center">
     <strong>Flmngr file manager is TinyMCE plugin for managing your media library. 30000+ free stock photos. </strong>
@@ -34,6 +34,8 @@ If you have already installed and use [N1ED](https://n1ed.com) plugin, please do
 
 ## Installation
 
+[Download File Manager plugin](https://flmngr.com/download/flmngr-tinymce.zip)
+
 Copy `file-manager` directory into `tinymce/plugins/`.
 You will have such file path as result: `tinymce/plugins/file-manager/plugin.js`.
 
@@ -56,7 +58,7 @@ tinymce.init(
 
 ## Backend installation
 
-This plugin can access your server only if you installed a backend to support calls from Flmngr. Please [follow instructions](https://n1ed.com/install/manual/tinymce/install-tinymce-php-file-manager-composer) to install Flmngr backend on your server (a number of different backend editions are over this link). PHP backend is preferable due to it supports the latest features we included into Flmngr.
+This plugin can access your server only if you installed a backend to support calls from Flmngr. Please [follow instructions](https://flmngr.com/doc/install-php-file-manager-composer) to install Flmngr backend on your server (a number of different backend editions are over this link). PHP backend is preferable due to it supports the latest features we included into Flmngr.
 
 ## Configuration
 
