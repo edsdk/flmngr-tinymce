@@ -14,13 +14,38 @@
 //      https://github.com/edsdk/flmngr-tinymce
 //
 
-var apiKey = tinymce.settings.apiKey;
-var version = tinymce.settings.version;
-var n1edPrefix = tinymce.settings.n1edPrefix;
-var n1edHttps = tinymce.settings.n1edHttps;
-var n1edPrefixApp = tinymce.settings.n1edPrefixApp;
-var n1edHttpsApp = tinymce.settings.n1edHttpsApp;
-var urlCache = tinymce.settings.urlCache;
+var apiKey;
+var version;
+var n1edPrefix;
+var n1edHttps;
+var n1edPrefixApp;
+var n1edHttpsApp;
+var urlCache;
+if (tinymce.majorVersion == 6) {
+    var getOption = function(name, isBoolean) {
+        var options = tinymce.get()[0].options;
+        options.register(name, {processor: isBoolean ? "boolean" : "string", default: isBoolean ? false : ""});
+        if (options.isSet(name))
+            return options.get(name);
+        else
+            return null;
+    }
+    apiKey = getOption("apiKey", false);
+    version = getOption("version", false);
+    n1edPrefix = getOption("n1edPrefix", false);
+    n1edHttps = getOption("n1edHttps", true);
+    n1edPrefixApp = getOption("n1edPrefixApp", false);
+    n1edHttpsApp = getOption("n1edHttpsApp", true);
+    urlCache = getOption("urlCache", false);
+} else {
+    apiKey = tinymce.settings.apiKey;
+    version = tinymce.settings.version;
+    n1edPrefix = tinymce.settings.n1edPrefix;
+    n1edHttps = tinymce.settings.n1edHttps;
+    n1edPrefixApp = tinymce.settings.n1edPrefixApp;
+    n1edHttpsApp = tinymce.settings.n1edHttpsApp;
+    urlCache = tinymce.settings.urlCache;
+}
 
 // Cookies may contain data for development purposes (which version to load, from where, etc.).
 function getCookie(name) {
@@ -59,8 +84,12 @@ tinymce.PluginManager.load('N1EDEco',  urlPlugin);
 
 tinymce.PluginManager.add(
     "file-manager",
-    function() {},
+    function(ed, url) {
+        // TinyMCE 6 does not initialize dependency plugins automatically
+        if (tinymce.majorVersion == 6)
+            tinymce.PluginManager.get("N1EDEco")(ed, url);
+    },
     ["N1EDEco"] // We can not move N1EDEco in this file due to we need to dynamically
-                // embed configuration from your Dashboard into it.
-                // So N1EDEco add-on can be loaded only from CDN
+    // embed configuration from your Dashboard into it.
+    // So N1EDEco add-on can be loaded only from CDN
 );
