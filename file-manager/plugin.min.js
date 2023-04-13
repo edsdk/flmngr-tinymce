@@ -22,23 +22,32 @@ var n1edPrefixApp;
 var n1edHttpsApp;
 var urlCache;
 if (tinymce.majorVersion == 6) {
-    var getOption = function(name, isBoolean) {
+    var getOption = function(name, type) {
         var options = tinymce.get()[0].options;
-        options.register(name, {processor: isBoolean ? "boolean" : "string", default: isBoolean ? false : ""});
+        let defaultValue = false;
+        if (type === "string")
+            defaultValue = "";
+        else if (type === "object")
+            defaultValue = {};
+        options.register(name, {processor: type ? "boolean" : "string", default: defaultValue});
         if (options.isSet(name))
             return options.get(name);
         else
             return null;
     }
-    apiKey = getOption("apiKey", false);
-    version = getOption("version", false);
-    n1edPrefix = getOption("n1edPrefix", false);
-    n1edHttps = getOption("n1edHttps", true);
-    n1edPrefixApp = getOption("n1edPrefixApp", false);
-    n1edHttpsApp = getOption("n1edHttpsApp", true);
-    urlCache = getOption("urlCache", false);
+    flmngrOpts = getOption("Flmngr", "object");
+    apiKey = flmngrOpts["apiKey"] || getOption("apiKey", "string");
+    version = getOption("version", "string");
+    n1edPrefix = getOption("n1edPrefix", "string");
+    n1edHttps = getOption("n1edHttps", "boolean");
+    n1edPrefixApp = getOption("n1edPrefixApp", "string");
+    n1edHttpsApp = getOption("n1edHttpsApp", "boolean");
+    urlCache = getOption("urlCache", "string");
 } else {
-    apiKey = tinymce.settings.apiKey;
+    if (!!tinymce.settings.Flmngr)
+        apiKey = tinymce.settings.Flmngr.apiKey;
+    if (!!apiKey)
+        apiKey = tinymce.settings.apiKey;
     version = tinymce.settings.version;
     n1edPrefix = tinymce.settings.n1edPrefix;
     n1edHttps = tinymce.settings.n1edHttps;
