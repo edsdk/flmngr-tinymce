@@ -29,14 +29,17 @@ if (tinymce.majorVersion == 6) {
             defaultValue = "";
         else if (type === "object")
             defaultValue = {};
-        options.register(name, {processor: type ? "boolean" : "string", default: defaultValue});
+        options.register(name, {processor: type, default: defaultValue});
         if (options.isSet(name))
             return options.get(name);
         else
             return null;
     }
     flmngrOpts = getOption("Flmngr", "object");
-    apiKey = flmngrOpts["apiKey"] || getOption("apiKey", "string");
+    if (!!flmngrOpts)
+        apiKey = flmngrOpts["apiKey"];
+    if (!apiKey)
+        apiKey = getOption("apiKey", "string");
     version = getOption("version", "string");
     n1edPrefix = getOption("n1edPrefix", "string");
     n1edHttps = getOption("n1edHttps", "boolean");
