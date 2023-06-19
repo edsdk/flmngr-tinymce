@@ -24,13 +24,13 @@ If you have already installed and use [N1ED](https://n1ed.com) plugin, please do
 
 - Seamless integration with TinyMCE
 - [ImgPen](https://imgpen.com) image editor onboard
-- Easy install as CKEditor plugin
-- Support of PHP, .NET, Java and Node backends
+- Easy installation as CKEditor plugin
+- Support of PHP, and Node backends
 - Upload files and images
 - All standard features to organize files
 - Dynamic fast browsing big folders
 - Support of local storage, Amazon S3 and Azure Cloud
-- [API](https://flmngr.com/api/classes/flmngr.html) for programmatic calls.
+- [API](https://flmngr.com/doc/api) for programmatic calls.
 
 ## Installation
 
@@ -70,4 +70,4 @@ See example values in Installation section above.
 
 ## Support
 
-Please do not hesitate to ask any questions regarding installation or using sending a letter to [support e-mail](support@helpdesk.edsdk.com).
+Please do not hesitate to ask any questions regarding installation or using sending a letter to [support e-mail](mailto:support@helpdesk.edsdk.com).
