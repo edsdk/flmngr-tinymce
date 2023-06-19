@@ -5,7 +5,7 @@
 <h1 align="center" style="margin-top:-20px">Flmngr</h1>
 
 <p align="center">
-    <strong>Flmngr file manager is TinyMCE plugin for managing your media library. 30000+ free stock photos. </strong>
+    <strong>Free file manager plugin for TinyMCE. Image Editor is included. Supports <a href="https://flmngr.com/doc/install-file-manager-server">PHP</a> and <a href="https://flmngr.com/doc/install-file-manager-server-node">Node.js</a>. </strong>
 </p>
 
 <p align="center">
@@ -16,13 +16,13 @@
 
 ## Intro
 
-This is a **plugin for TinyMCE 5**, free to install and use. This plugin can use free or premium version of Flmngr, the only difference in features is image editor is not included into free version.
+This is a **plugin for TinyMCE**, free to install and use. This plugin can use free or premium version of Flmngr, the only difference in features is image editor is not included into free version.
 
 If you have already installed and use [N1ED](https://n1ed.com) plugin, please do not install this one: Flmngr is included into N1ED. Use this Flmngr add-on when you need just file manager and image editor only.
 
 ### Main features:
 
-- Seamless integration with TinyMCE 5
+- Seamless integration with TinyMCE
 - [ImgPen](https://imgpen.com) image editor onboard
 - Easy install as CKEditor plugin
 - Support of PHP, .NET, Java and Node backends
@@ -58,7 +58,7 @@ tinymce.init(
 
 ## Backend installation
 
-This plugin can access your server only if you installed a backend to support calls from Flmngr. Please [follow instructions](https://flmngr.com/doc/install-php-file-manager-composer) to install Flmngr backend on your server (a number of different backend editions are over this link). PHP backend is preferable due to it supports the latest features we included into Flmngr.
+This plugin can access your server only if you installed a backend to support calls from Flmngr. Please follow the instructions to install Flmngr backend on your server (a number of different backend editions are over this link): [PHP](https://flmngr.com/doc/install-file-manager-server) or [Node.js](https://flmngr.com/doc/install-file-manager-server-node). There is also a [standalone microservice](https://flmngr.com/doc/install-file-manager-server-microservice) option.
 
 ## Configuration
 
@@ -70,4 +70,4 @@ See example values in Installation section above.
 
 ## Support
 
-Please do not hesitate to ask any questions regarding installation or using sending a letter to [support e-mail](support@n1ed.zendesk.com).
+Please do not hesitate to ask any questions regarding installation or using sending a letter to [support e-mail](support@helpdesk.edsdk.com).
