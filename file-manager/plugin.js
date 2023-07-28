@@ -1,5 +1,5 @@
 /*!
- * Add-on for including Flmngr into your TinyMCE 5
+ * Add-on for including Flmngr into your TinyMCE
  * Developer: Flmngr
  * Website: https://flmngr.com/
  * License: GPL v3
