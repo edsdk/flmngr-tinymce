@@ -24,7 +24,7 @@ var urlCache;
 if (tinymce.majorVersion == 6) {
     var getOption = function(name, type) {
         var options = tinymce.get()[0].options;
-        let defaultValue = false;
+        var defaultValue = false;
         if (type === "string")
             defaultValue = "";
         else if (type === "object")
@@ -35,7 +35,7 @@ if (tinymce.majorVersion == 6) {
         else
             return null;
     }
-    flmngrOpts = getOption("Flmngr", "object");
+    var flmngrOpts = getOption("Flmngr", "object");
     if (!!flmngrOpts)
         apiKey = flmngrOpts["apiKey"];
     if (!apiKey)
@@ -70,7 +70,8 @@ function getCookie(name) {
 }
 
 
-apiKey = getCookie("N1ED_APIKEY") || apiKey || "FLMNFLMN";
+window.TINYMCE_OVERRIDE_API_KEY_PARAM = "OVERRIDE_API_KEY";
+apiKey = getCookie("N1ED_APIKEY") || apiKey || window.OVERRIDE_API_KEY || "FLMNFLMN";
 n1edHttps = !(getCookie("N1ED_HTTPS") === "false" || n1edHttps === false);
 n1edPrefix = getCookie("N1ED_PREFIX") || n1edPrefix || null;
 n1edHttpsApp = !(getCookie("N1ED_HTTPS_APP") === "false" || n1edHttpsApp === false);
