@@ -31,7 +31,7 @@
     var PLUGIN_NAME = "file-manager";
     var DEFAULT_API_KEY = "FLMNFLMN";
 
-    window.n1edPluginVersion=202310003;
+    window.n1edPluginVersion=202310004;
 
     function get(varName, defaultValue) {
         if (window[varName] !== undefined && window[varName] !== "-")
@@ -77,7 +77,7 @@
 
     var protocol = n1edHttps ? "https" : "http";
 
-    var host = (n1edPrefix ? (n1edPrefix + ".") : "") + "cdn.edsdk.com";
+    var host = (n1edPrefix ? (n1edPrefix + ".") : "") + "cloud.n1ed.com";
     var urlPlugin = protocol + "://" + host + "/a/" + apiKey + "/plugins/N1EDEco/plugin.js";
 
     // Load Ecosystem plugin manually due to
