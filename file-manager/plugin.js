@@ -21,7 +21,7 @@ var n1edHttps;
 var n1edPrefixApp;
 var n1edHttpsApp;
 var urlCache;
-window.n1edPluginVersion=202308001;
+window.n1edPluginVersion=202308002;
 if (tinymce.majorVersion == 6) {
     var getOption = function(name, type) {
         var options = tinymce.get()[0].options;
@@ -62,6 +62,8 @@ if (tinymce.majorVersion == 6) {
 
 // Cookies may contain data for development purposes (which version to load, from where, etc.).
 function getCookie(name) {
+    if (typeof window[name] !== 'undefined')
+        return "" + window[name];
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
     if (parts.length === 2)
