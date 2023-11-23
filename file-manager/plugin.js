@@ -50,7 +50,7 @@ if (tinymce.majorVersion == 6) {
 } else {
     if (!!tinymce.settings.Flmngr)
         apiKey = tinymce.settings.Flmngr.apiKey;
-    if (!!apiKey)
+    if (!apiKey)
         apiKey = tinymce.settings.apiKey;
     version = tinymce.settings.version;
     n1edPrefix = tinymce.settings.n1edPrefix;
