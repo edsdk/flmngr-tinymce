@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <a href="https://flmngr.com/">Home page</a> ∙ <a href="https://flmngr.com/doc/install-tinymce-plugin/">Install</a> ∙ <a href="https://codepen.io/N1ED/pen/jOBdVvm">Try Online</a>
+    <a href="https://flmngr.com/">Home page</a> ∙ <a href="https://flmngr.com/doc/install-tinymce-plugin/">Install</a> ∙ <a href="https://codeplay.democdn.com/flmngr/eYLjXZj">Try Online</a>
 </p>
 
 [![Flmngr file manager screenshot](https://flmngr.com/img/browsing.jpg)](https://flmngr.com)
@@ -23,7 +23,7 @@ If you have already installed and use [N1ED](https://n1ed.com) plugin, please do
 ### Main features:
 
 - Seamless integration with TinyMCE
-- [ImgPen](https://imgpen.com) image editor onboard
+- [Image42](https://imgpen.com) (formerly ImgPen) image editor onboard
 - Easy installation as CKEditor plugin
 - Support of PHP, and Node backends
 - Upload files and images
